@@ -1,6 +1,6 @@
 {
   "name": "react-crud-admin",
-  "version": "1.0.32",
+  "version": "1.0.33",
   "description": "React Admin inspired by DjangoAdmin",
   "main": "public/bundle.js",
   "dependencies": {
