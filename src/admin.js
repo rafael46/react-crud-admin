@@ -889,7 +889,7 @@ class Admin extends React.Component {
     render_table()
     {
 
-	return 	<table className="ra-margin-top-20 table table-hover">
+	return 	<table className="ra-margin-top-20 ra-table table table-hover">
 	    
 	    <thead>
 	    

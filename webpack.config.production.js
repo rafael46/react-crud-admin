@@ -2,6 +2,8 @@
 var webpack = require('webpack');
 var path = require('path');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+
 const HOST = process.env.HOST || "127.0.0.1";
 const PORT = process.env.PORT || "9999";
 
@@ -12,13 +14,13 @@ const PORT = process.env.PORT || "9999";
 		`webpack/hot/only-dev-server`,
 	
 */
-const ExtractTextPlugin = require("extract-text-webpack-plugin");
-
+//const ExtractTextPlugin = require("extract-text-webpack-plugin");
+/*
 const extractSass = new ExtractTextPlugin({
     filename: "[name].css",
     publicPath: "./public",
 
-});
+});*/
 var loaders = [
 	{
 		test: /\.jsx?$/,
@@ -61,32 +63,19 @@ var loaders = [
 		exclude: /(node_modules|bower_components)/,
 		loader: "url-loader?limit=10000&mimetype=image/png"
 	},
-    	{
-		test:  /\.json$/,
-		loader: "json-loader"
-	},
+
        {
 	test   : /\.(ttf|eot|svg|woff(2)?)(\?[a-z0-9=&.]+)?$/,
 	loader : 'file-loader'
 
        },
     {
-	test   : /\.css$/,
-	loaders: ['style-loader', 'css-loader', 'resolve-url-loader']
-	
-    }, {
-	test   : /\.scss$/,
-	use: extractSass.extract({
-	    use: [{
-		loader: "css-loader"
-	    },
-	    {
-		loader: "sass-loader"
-	    },
-	],
-	    // use style-loader in development
-	    fallback: "style-loader"
-	})
+        test: /\.(sa|sc|c)ss$/,
+        use: [
+             MiniCssExtractPlugin.loader,
+            'css-loader',
+            'sass-loader',
+        ],
     }
 ];
 
@@ -130,8 +119,13 @@ module.exports = {
 	    host: HOST
 	},
     plugins: [
-	extractSass,
-	        
+
+new MiniCssExtractPlugin({
+      // Options similar to the same options in webpackOptions.output
+      // both options are optional
+      filename: '[name].css',
+      chunkFilename: '[id].css',
+}),	        
 	    new webpack.NoEmitOnErrorsPlugin(),
 	    new webpack.HotModuleReplacementPlugin(),
 	    new HtmlWebpackPlugin({
