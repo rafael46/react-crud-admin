@@ -773,6 +773,7 @@ Property | Default Value  | Description
 `display_type` | `"list"` | Current display. Can be `"list"` or `"change"` for add/change view
 `object` | `null` | Current object to be edited (or created) in the add/change view
 `selected_objects` |  Empty set | The `Set` class a wrapper around `array` that implements set  
+`loading` | `false` | A boolean that controls visibility of the progress indicator
 
 ### Progress Indicator
 `show_progress` and `hide_progress` can be used in the both the list display and add/change view to display and hide a progress indicator. `render_progress` can be used to override the default progress indicator component to be rendered. `render_progress` has one argument which is a boolean denoting wether or not to render a progress indicator. For example,
@@ -921,6 +922,7 @@ render_actions()
 It is possible to add components above and below the add/change view using `render_above_change_view` and `render_below_change_view` methods. Both methods take no arguments and by default return `null`. These methods can be overridden to return components. The full implementation is
 
 ```javascript
+
     render_change_page()
     {
 	return <div>
@@ -931,7 +933,6 @@ It is possible to add components above and below the add/change view using `rend
 
 
     }
-
 ```
 
 

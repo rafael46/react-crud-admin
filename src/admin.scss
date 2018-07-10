@@ -1,4 +1,4 @@
-@import "../node_modules/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
 
 
 .sort-active
@@ -51,7 +51,7 @@ a
 {
     @extend .btn;
     @extend .btn-info;
-    @extend  .pull-right;
+    @extend  .float-right;
     margin : 10px;
 }
 
@@ -65,4 +65,9 @@ a
 {
     @extend  .form-control;
     margin : 10px;
+}
+
+table
+{
+    overflow-x : auto;
 }

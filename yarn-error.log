@@ -1,0 +1,78 @@
+Arguments: 
+  /usr/bin/node /usr/local/bin/yarn add bootstrap
+
+PATH: 
+  /home/mubarak/bin:/home/mubarak/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/mubarak/flutter/bin:/home/mubarak/android-studio/gradle/gradle-3.2/bin:/home/mubarak/Android/Sdk/tools:/home/mubarak/Android/Sdk/platform-tools:/opt/mssql-tools/bin
+
+Yarn version: 
+  1.3.2
+
+Node version: 
+  8.11.1
+
+Platform: 
+  linux x64
+
+npm manifest: 
+  {
+    "name": "react-crud-admin",
+    "version": "1.0.32",
+    "description": "React Admin inspired by DjangoAdmin",
+    "main": "public/bundle.js",
+    "dependencies": {
+      "lodash": "",
+      "react": "^16.3.0",
+      "react-jsonschema-form": "^1.0.0",
+      "react-select": "^1.2.1",
+      "uuid": "^3.2.1"
+    },
+    "devDependencies": {
+      "babel-core": "",
+      "babel-loader": "",
+      "babel-plugin-transform-class-properties": "^6.24.1",
+      "babel-plugin-transform-runtime": "",
+      "babel-preset-es2015": "",
+      "babel-preset-react": "",
+      "babel-preset-stage-2": "",
+      "bootstrap-sass": "^3.3.7",
+      "css-loader": "",
+      "extract-text-webpack-plugin": "^3.0.2",
+      "file-loader": "",
+      "html-webpack-plugin": "",
+      "moment": "",
+      "moment-timezone": "",
+      "node-sass": "",
+      "react": "",
+      "react-dom": "^16.3.0",
+      "resolve-url-loader": "",
+      "sass-loader": "",
+      "style-loader": "",
+      "url-loader": "",
+      "webpack": "",
+      "webpack-dev-server": "",
+      "whatwg-fetch": ""
+    },
+    "scripts": {
+      "edocs": "esdoc -c .esdoc.json",
+      "build": "webpack --config webpack.config.production.js --progress --profile --colors",
+      "build-publish": "webpack --config webpack.config.publish.js --progress --profile --colors",
+      "start": "webpack-dev-server --progress --profile --colors",
+      "test": "echo \"Error: no test specified\" && exit 1",
+      "scss": "node-sass src -o css"
+    },
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/mjibril/react-crud-admin.git"
+    },
+    "author": "Mubarak Jibril",
+    "license": "ISC"
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
+
+Trace: 
+  Error: EACCES: permission denied, rmdir '/home/mubarak/Dropbox/Projects/ReactAdmin/node_modules/npm/.github'
