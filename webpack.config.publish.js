@@ -82,8 +82,7 @@ module.exports = {
     }
   },
     entry: [
-	'whatwg-fetch',
-	'./src/admin.js' // Your appʼs entry point
+		'./src/admin.js' // Your appʼs entry point
 	],
 	devtool: process.env.WEBPACK_DEVTOOL || 'cheap-module-source-map',
 	output: {
